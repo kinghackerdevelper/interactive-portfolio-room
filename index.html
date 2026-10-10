@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Room Portfolio</title>
+    <meta
+      name="description"
+      content="Interactive portfolio room experience for a developer profile."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <span class="brand-mark">D</span>
+          <span class="brand-name">Dylan Carter</span>
+        </div>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="about">
+        <div class="hero-copy">
+          <p class="eyebrow">Full Stack Developer / Product Designer</p>
+          <h1>Building digital experiences that feel alive.</h1>
+          <p class="intro">
+            I design and develop interfaces that blend creativity, performance, and
+            strong engineering — from polished products to immersive web experiences.
+          </p>
+          <div class="hero-actions">
+            <button class="primary" id="enter-room">Enter the room</button>
+            <a class="secondary" href="#contact">Let's connect</a>
+          </div>
+          <ul class="quick-stats">
+            <li><strong>6+</strong><span>Years</span></li>
+            <li><strong>24</strong><span>Projects</span></li>
+            <li><strong>8</strong><span>Clients</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <main class="scene-wrap">
+        <div class="scene" id="scene">
+          <div class="room-glow"></div>
+          <div class="wall wall-left"></div>
+          <div class="wall wall-right"></div>
+          <div class="floor"></div>
+
+          <div class="door-frame">
+            <div class="door-panel"></div>
+          </div>
+
+          <div class="desk">
+            <div class="desk-top"></div>
+            <div class="desk-leg leg-left"></div>
+            <div class="desk-leg leg-right"></div>
+          </div>
+
+          <div class="monitor interactive-object" data-key="profile">
+            <div class="screen glow">
+              <div class="screen-ui">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="stand"></div>
+            <div class="label">Profile</div>
+          </div>
+
+          <div class="laptop interactive-object" data-key="skills">
+            <div class="laptop-body">
+              <div class="laptop-screen">
+                <div class="code-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div class="label">Skills</div>
+          </div>
+
+          <div class="bookshelf interactive-object" data-key="education">
+            <div class="shelf"></div>
+            <div class="book b1"></div>
+            <div class="book b2"></div>
+            <div class="book b3"></div>
+            <div class="book b4"></div>
+            <div class="label">Education</div>
+          </div>
+
+          <div class="badge interactive-object" data-key="experience">
+            <div class="badge-circle">
+              <span>★</span>
+            </div>
+            <div class="label">Experience</div>
+          </div>
+
+          <div class="certificate interactive-object" data-key="projects">
+            <div class="cert-card">
+              <div class="seal"></div>
+            </div>
+            <div class="label">Projects</div>
+          </div>
+
+          <div class="plant interactive-object" data-key="contact">
+            <div class="pot"></div>
+            <div class="leaf l1"></div>
+            <div class="leaf l2"></div>
+            <div class="leaf l3"></div>
+            <div class="label">Contact</div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <aside class="info-panel" id="info-panel" aria-live="polite">
+      <div class="panel-header">
+        <div>
+          <p class="panel-kicker" id="panel-kicker">Developer details</p>
+          <h2 id="panel-title">Profile</h2>
+        </div>
+        <button class="close-btn" id="close-panel" aria-label="Close panel">✕</button>
+      </div>
+      <div class="panel-content" id="panel-content"></div>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
